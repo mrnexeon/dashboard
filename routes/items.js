@@ -3,10 +3,9 @@ var router = express.Router();
 var Datastore = require('nedb');
 var db = new Datastore({ filename: 'items' });
 
-
-
-router.post('/', (req, res) => {
-    
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    res.render('items', { title: 'Express' });
 });
 
 module.exports = router;
