@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script   src="http://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script></head>
+<body>
+    <h1>Панель управления</h1>
+    <h2>Товары:</h2>
+    <ul>
+        <li>
+            <span class="name">Название товара</span>
+            <span class="price">100 р.</span>
+            <span class="count">1000 шт.</span>
+            <button type="remove">Удалить</button>
+        </li>
+        <li>
+            <span class="name">Название товара 2</span>
+            <span class="price">100 р.</span>
+            <span class="count">1000 шт.</span>
+            <button type="remove">Удалить</button>
+        </li>
+    </ul>
+
+    <h2>Добавить товар:</h2>
+    <form>
+        <p>
+            <legend>Штрих-код</legend>
+            <input name="barcode" placeholder="4690363040513"></input>
+            <span class="item-name"></span>
+        </p>
+        <p>
+            <legend>Цена за ед.</legend>
+            <input type="number" name="price" placeholder="100"></input>
+        </p>
+        <p>
+            <legend>Количество</legend>
+            <input type="number" name="count" placeholder="1000"></input>
+        </p>
+
+        <input type="submit" value="Добавить"/>
+    </form>
+</body>
+<script src="main.js"></script>
+</html>
