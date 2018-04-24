@@ -1,1 +1,45 @@
-Корзины
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script   src="http://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script></head>
+  </head>
+  <body>
+    <header>
+        <h1>Carts</h1>
+        <nav>
+            <a href="#">Сотрудники</a>
+            <a href="#">Товары</a>
+            <a href="#">Товары</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Корзина:</h2>
+        <ul>
+            <li>
+                <span class="name">NameOfItem#1</span>
+                <span class="price">100 р.</span>
+                <span class="count">1000 шт.</span>
+                <button type="remove">Удалить</button>
+            </li>
+            <li>
+                <span class="name">NameOfItem#2</span>
+                <span class="price">100 р.</span>
+                <span class="count">1000 шт.</span>
+                <button type="remove">Удалить</button>
+            </li>
+        </ul>
+
+        <h2> Общая стоимость:200 р.</h2>
+        <form>
+          
+            <input class="add-btn" type="submit" value="Оплатить"/>
+            
+        </form>
+
+    </main>
+  </body>
+  <script src="js/main.js"></script>
+</html>
