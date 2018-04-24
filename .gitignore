@@ -61,6 +61,5 @@ typings/
 .next
 
 /node_modules
-/bin
 
 package.json
