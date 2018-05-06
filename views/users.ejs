@@ -1,1 +1,47 @@
-Сотрудники
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script   src="http://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script></head>
+  </head>
+  <body>
+    <header>
+        <h1>Users</h1>
+        <nav>
+            <a href="/users">Сотрудники</a>
+            <a href="/items">Товары</a>
+            <a href="/carts">Корзины</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Сотрудники:</h2>
+        <li>
+                <span class="name">Жмышенко Валерий Альбертович</span>
+                <button type="change">Изменить</button>
+                <button type="remove">Удалить</button>
+        </li>
+        <h2>Форма:</h2>
+        <form>
+            <p>
+                <legend>Имя</legend>
+                <input name="user" placeholder=""></input>
+                <span class="item-name"></span>
+            </p>
+            <p>
+                <legend>Фамилия</legend>
+                <input type="text" name="price" placeholder=""></input>
+            </p>
+            <p>
+                <legend>Отчество</legend>
+                <input type="text" name="count" placeholder=""></input>
+            </p>
+
+            <input class="add-btn" type="submit" value="Добавить сотрудника"/>
+        </form>
+
+    </main>
+  </body>
+  <script src="js/main.js"></script>
+</html>
