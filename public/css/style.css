@@ -1,8 +1,71 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #f8f9fa;
+  font-size: 16px;
+  color: #111;
+  padding-top: 80px;
+  min-width: 400px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #252525;
 }
 
 a {
-  color: #00B7FF;
+  color: #b9b9b9
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.lineheight32 {
+  line-height: 32px;
+}
+
+.navbar {
+  padding: 15px;
+  background: #484848;
+  color: #fff;
+  min-width: 250px;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+.size-icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.list-group-item{
+  background: none;
+  vertical-align: 38px;
+}
+
+.btn_del {
+  padding: 3px 6px;
+  height: 32px;
+}
+
+.add-btn {
+  float: right;
+}
+
+.price {
+  min-width: 80px;
+}
+
+.count {
+  min-width: 100px;
+}
+
+.form-add div {
+  margin: 10px 0px;
 }
