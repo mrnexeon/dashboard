@@ -2,46 +2,192 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/css/style.css' />
-    <script   src="http://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script></head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-        <h1>Users</h1>
-        <nav>
-            <a href="/users">Сотрудники</a>
-            <a href="/items">Товары</a>
-            <a href="/carts">Корзины</a>
-        </nav>
+      <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fab fa-dyalog"></i>ashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="size-icon"><i class="fas fa-bars"></i></span>
+            </button>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a class="nav-link" href="#"><i class="far fa-address-card"></i> Сотрудники</a></li>
+              <li><a class="nav-link" href="http://localhost:3000/items"><i class="fas fa-boxes"></i> Товары</a></li>
+              <li><a class="nav-link" href="http://localhost:3000/carts"><i class="fas fa-shopping-basket"></i> Корзины</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-
-    <main>
-        <h2>Сотрудники:</h2>
-        <li>
-                <span class="name">Жмышенко Валерий Альбертович</span>
-                <button type="change">Изменить</button>
-                <button type="remove">Удалить</button>
+    <main class="container">
+      <h2>Сотрудники:</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="row lineheight32">
+            <div class="col ">Торопова Яна Александровна </div>
+            <div class="col">Администатор</div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button class="btn_del btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1"><i class="fas fa-wrench"></i></i></button>
+              <button class="btn_del btn btn-outline-danger" type="remove"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+            <div class="collapse col-12 col-lg-6 collapse_personal float-right" id="collapse1">
+              <div class="card card-body border-success center_form">
+                <form>
+                  <div class="form-group row">
+                    <label class="col-6 lineheight40" for="exampleFormControlInput1">Имя</label>
+                    <input type="text" class="col-6 form-control" id="exampleFormControlInput1" value="Яна">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6 lineheight40" for="exampleFormControlInput1">Фамилия</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" value="Торопова">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Отчество</label>
+                    <input type="text" class="col-6 form-control" id="exampleFormControlInput1" value="Александровна">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6" for="exampleFormControlSelect1">Должность</label>
+                    <select class="form-control col-6" id="exampleFormControlSelect1">
+                      <option selected>Администатор</option>
+                      <option>Фасовщик</option>
+                      <option>Уборщик</option>
+                    </select>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn_del btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse3">Отменить</button>
+                    <button class="btn_del btn btn-outline-success" type="remove">Применить</button>
+                  </div>
+                </form>
+              </div>
+          </div>
         </li>
-        <h2>Форма:</h2>
-        <form>
-            <p>
-                <legend>Имя</legend>
-                <input name="user" placeholder=""></input>
-                <span class="item-name"></span>
-            </p>
-            <p>
-                <legend>Фамилия</legend>
-                <input type="text" name="price" placeholder=""></input>
-            </p>
-            <p>
-                <legend>Отчество</legend>
-                <input type="text" name="count" placeholder=""></input>
-            </p>
-
-            <input class="add-btn" type="submit" value="Добавить сотрудника"/>
-        </form>
-
+        <li class="list-group-item">
+          <div class="row lineheight32">
+            <div class="col">Лашкина Фаина Степановна</div>
+            <div class="col">Фасовщик</div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button class="btn_del btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2"><i class="fas fa-wrench"></i></i></button>
+              <button class="btn_del btn btn-outline-danger" type="remove"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+            <div class="collapse col-12 col-lg-6 collapse_personal float-right" id="collapse2">
+              <div class="card card-body border-success">
+                <form>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Имя</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" value="Фаина">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Фамилия</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" value="Лашкина">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Отчество</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" value="Степановна">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6 " for="exampleFormControlSelect1">Должность</label>
+                    <select class="form-control col-6 " id="exampleFormControlSelect1">
+                      <option>Администатор</option>
+                      <option selected>Фасовщик</option>
+                      <option>Уборщик</option>
+                    </select>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn_del btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse3">Отменить</button>
+                    <button class="btn_del btn btn-outline-success" type="remove">Применить</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row lineheight32">
+            <div class="col">Иньшов Евграф Святославович</div>
+            <div class="col">Уборщик</div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button class="btn_del btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3"><i class="fas fa-wrench"></i></i></button>
+              <button class="btn_del btn btn-outline-danger" type="remove"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+            <div class="collapse col-12 col-lg-6 collapse_personal float-right" id="collapse3">
+              <div class="card card-body border-success">
+                <form>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Имя</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" value="Евграф">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Фамилия</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" value="Иньшов">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Отчество</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" value="Святославович">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6 " for="exampleFormControlSelect1">Должность</label>
+                    <select class="form-control col-6 " id="exampleFormControlSelect1">
+                      <option>Администатор</option>
+                      <option>Фасовщик</option>
+                      <option selected>Уборщик</option>
+                    </select>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn_del btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Отменить</button>
+                    <button class="btn_del btn btn-outline-success" type="remove">Применить</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+              <button class="btn_del btn btn-success" type="button" data-toggle="collapse" data-target="#collapse_addPersonal" aria-expanded="false" aria-controls="collapse_addPersonal">Добавить сотрудника</button>
+              <div class="collapse col-12 col-lg-6 collapse_personal" id="collapse_addPersonal">
+              <div class="card card-body border-success">
+                <form>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Имя</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" placeholder="Имя">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Фамилия</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" placeholder="Фамилия">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6  lineheight40" for="exampleFormControlInput1">Отчество</label>
+                    <input type="text" class="col-6  form-control" id="exampleFormControlInput1" placeholder="Отчество">
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-6 " for="exampleFormControlSelect1">Должность</label>
+                    <select class="form-control col-6 " id="exampleFormControlSelect1">
+                      <option ыselected>Выбрать должность</option>
+                      <option>Администатор</option>
+                      <option>Фасовщик</option>
+                      <option>Уборщик</option>
+                    </select>
+                  </div>
+                  <div class="btn-group " role="group" aria-label="Basic example">
+                    <button class="btn_del btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#collapse_addPersonal" aria-expanded="false" aria-controls="collapse3">Отменить</button>
+                    <button class="btn_del btn btn-outline-success" type="remove">Применить</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </li>
+      </ul>
     </main>
   </body>
   <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </html>
