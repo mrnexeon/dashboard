@@ -20,8 +20,16 @@ a:hover {
   text-decoration: none;
 }
 
+.container {
+  min-width: 400px;
+}
+
 .lineheight32 {
   line-height: 32px;
+}
+
+.lineheight50 {
+  line-height: 50px;
 }
 
 .navbar {
@@ -43,6 +51,9 @@ a:hover {
 .list-group-item:first-child {
   border-top: none;
 }
+.list-group-item:last-child {
+  border-bottom: none;
+}
 
 .list-group-item{
   background: none;
@@ -52,6 +63,10 @@ a:hover {
 .btn_del {
   padding: 3px 6px;
   height: 32px;
+}
+
+.btn_del_prod {
+  margin-top: 9px;
 }
 
 .add-btn {
@@ -68,4 +83,51 @@ a:hover {
 
 .form-add div {
   margin: 10px 0px;
+}
+
+.form-add div legend{
+  font-size: 20px;
+}
+
+.add_product h2 {
+  margin-bottom: 20px;
+}
+
+.add_product_btn {
+  width: 50px;
+  font-size: 32px;
+  padding: 0px 0px;
+  border-radius: 25px;
+}
+
+.add_product_btn i {
+}
+
+.result {
+  padding: 0px 25px;
+  margin-bottom: 20px;
+}
+
+.result h4 {
+  margin-bottom: none;
+  line-height: 38px;
+}
+
+.ID_carts {
+  padding: 0px 20px;
+  font-size: 30px;
+}
+
+.form_carts {
+  margin-left: 10px;
+  width: 200px;
+}
+
+.add_cart {
+  background: #5aaaff;
+}
+
+.add_cart_name{
+  color: #fff;
+  text-decoration: none;
 }
