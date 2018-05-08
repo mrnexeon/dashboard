@@ -9,19 +9,30 @@ $(document).ready(() => {
 
     // TODO: Получать данные о товаре через штрих код
 
-    $('.add-btn').click((e) => {
+    $('[name="add-item"]').click((e) => {
         e.preventDefault();
         
-        var bar = $('form [name="barcode"]').val(),
+        var name = $('form [name="name"]').val(),
             price = $('form [name="price"]').val(),
             count = $('form [name="count"]').val();
 
         $.post('/items', {
-            bar: bar,
+            name: name,
             price: price,
             count: count
-        }, (result) => {
-            console.log(result);
         });
+
+        location.reload();
     })
+
+    $('ul').on('click', 'button[type="remove"]', function() {
+        var name = $(this).parent().find(".name").text();
+        $(this).parent().parent().remove();
+
+        $('ul').first(".lineheight32").remove();
+
+        $.post('/items/remove', {
+            name: name,
+        });
+    });
 })
