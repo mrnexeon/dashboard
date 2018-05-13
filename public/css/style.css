@@ -28,6 +28,10 @@ a:hover {
   line-height: 32px;
 }
 
+.lineheight40 {
+  line-height: 40px;
+}
+
 .lineheight50 {
   line-height: 50px;
 }
@@ -130,4 +134,12 @@ a:hover {
 .add_cart_name{
   color: #fff;
   text-decoration: none;
+}
+
+.collapse_personal{
+  margin-top: 15px;
+}
+
+.center_form{
+  margin: 0px auto;
 }
